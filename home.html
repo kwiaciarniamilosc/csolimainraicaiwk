@@ -26,10 +26,10 @@
             font-family: 'EB Garamond', serif;
             line-height: 1.6;
             color: var(--text-color);
+            background-color: var(--light-bg);
             overflow-x: hidden;
         }
 
-        /* Header Styles */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             position: fixed;
@@ -49,21 +49,10 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            gap: 15px;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             color: var(--primary-color);
+            text-decoration: none;
         }
 
         nav ul {
@@ -95,61 +84,8 @@
             width: 100%;
         }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('assets/img/hero/hero-cover.jpg') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 20px;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        /* About & Services Sections */
         .section {
-            padding: 100px 20px;
+            padding: 80px 20px;
         }
 
         .section-content {
@@ -165,82 +101,29 @@
             color: var(--accent-color);
         }
 
-        /* Services Grid */
-        .services-grid {
+        .services-grid, .contact-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin: 20px 0;
-            color: var(--primary-color);
-        }
-
-        /* Contact Section */
-        .contact {
-            background: var(--light-bg);
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
+            gap: 20px;
         }
 
         .contact-info {
-            line-height: 2;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .contact-info h3 {
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
-        .contact-info i {
-            width: 25px;
-            color: var(--primary-color);
-        }
-
-        /* Footer */
         footer {
             background: var(--accent-color);
             color: white;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
-        }
-
-        .social-links {
-            margin: 20px 0;
         }
 
         .social-links a {
             color: white;
-            margin: 0 15px;
-            text-decoration: none;
+            margin: 0 10px;
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
@@ -249,36 +132,19 @@
             color: var(--primary-color);
         }
 
-        /* Mobile Menu */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
             nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
                 flex-direction: column;
-                padding: 20px;
-                text-align: center;
+                padding: 10px;
+                display: none; /* Hidden by default, shown via JavaScript or CSS class toggling */
             }
 
-            nav ul.active {
-                display: flex;
+            .services-grid, .contact-content {
+                grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
