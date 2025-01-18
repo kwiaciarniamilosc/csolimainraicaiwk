@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- Primary Meta Tags -->
     <title>Blog Kwiaciarnia Miłość | Porady Florystyczne i Trendy w Warszawie</title>
@@ -164,6 +165,12 @@
             color: var(--primary-color);
             text-decoration: none;
             transition: var(--transition);
+        }
+        .logo img {
+            height: 50px; /* Adjust height to desired size */
+            width: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Prevent overflow */
+            display: block; /* Prevent inline spacing issues */
         }
 
         .logo:hover {
@@ -382,6 +389,9 @@
         }
 
         @media (max-width: 768px) {
+            .logo img {
+                height: 40px; /* Adjust size for smaller screens */
+            }
             .mobile-menu-btn {
                 display: block;
             }
@@ -459,10 +469,9 @@
     </style>
 </head>
 <body>
-<<<<<<< HEAD
     <header>
         <div class="header-content">
-            <a href="assets/img/logo/logo.png" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/img/logo/logo.png" alt="Kwiaciarnia Miłość Logo">
                 <span class="logo-text">Kwiaciarnia Miłość</span>
             </a>
@@ -479,26 +488,6 @@
             </nav>
         </div>
     </header>
-=======
-    <div class="header-content">
-               <a href="#" class="logo">
-                <img src="/" alt="Kwiaciarnia Miłość ">
-                <span class="logo-text">Kwiaciarnia Miłość</span>
-        </a>
-
-        <!-- Navigation Menu -->
-        <nav>
-            <ul class="nav-list">
-                <li><a href="home.html" class="nav-link">Strona Główna</a></li>
-                <li><a href="index.html" class="nav-link">Blog</a></li>
-                <li><a href="about.html" class="nav-link">O Nas</a></li>
-                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
->>>>>>> 6ba43f2981e887b9508bee86055e476aa7eb6915
 
     <section class="blog-header">
         <h1 class="blog-title">Blog Kwiatowy</h1>
