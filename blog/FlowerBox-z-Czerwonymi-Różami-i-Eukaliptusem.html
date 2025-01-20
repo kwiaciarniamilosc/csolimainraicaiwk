@@ -58,7 +58,7 @@
         "name": "Kwiaciarnia Miłość",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://kwiaciarniamilosc.pl/assets/img/logo.png",
+          "url": "https://kwiaciarniamilosc.pl/assets/img/logo/logo.png",
           "width": 600,
           "height": 60
         }
@@ -157,7 +157,13 @@
             width: auto;
             height: auto;
         }
-        
+        .logo img {
+            height: 50px; /* Adjust height to desired size */
+            width: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Prevent overflow */
+            display: block; /* Prevent inline spacing issues */
+        }
+
         .logo-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
@@ -265,7 +271,7 @@
 <body>
     <header>
         <div class="header-content">
-            <a href="#" class="logo">
+            <a href="assets/img/logo/logo.png" class="logo">
             <img src="assets/img/logo/logo.png" alt="Kwiaciarnia Miłość Logo">
             <span class="logo-text">Kwiaciarnia Miłość</span>
             </a>
