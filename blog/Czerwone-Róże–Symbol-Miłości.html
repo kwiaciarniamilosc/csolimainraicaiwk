@@ -46,20 +46,23 @@
             top: 0;
             z-index: 1000;
         }
-        .nav-list {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: white;
-                padding left: 20px;
-                flex-direction: column;
-                align-items: center;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
+          .nav-list {
+            list-style: none; /* Removes default bullets */
+            display: flex; /* Makes the list items inline */
+            justify-content:flex-end; /* Aligns items to the left */
+            padding: 0; /* Removes default padding */
+            margin: 0; /* Removes default margin */
+        }
 
-            
+        .nav-list li {
+            margin-right: 20px; /* Adds spacing between links */
+        }
+
+        .nav-list a {
+            text-decoration: none; /* Removes underline */
+            color: #333; /* Sets text color */
+        }
+   
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -192,6 +195,12 @@
                 <span class="logo-text">Kwiaciarnia Miłość</span>
                 </a>
          </div> 
+	    <nav>
+            <ul class="nav-list">
+                <li><a href="#">blogu</a></li>
+                <li><a href="#">o nas</a></li>
+            </ul>
+          </nav>
      </header>
     <div class="blog-header">
         <h1>Czerwone róże: symbole miłości, namiętności i elegancji</h1>
