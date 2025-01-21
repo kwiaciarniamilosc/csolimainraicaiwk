@@ -41,7 +41,7 @@
         "@id": "https://kwiaciarniamilosc.pl/blog/flowerbox-czerwone-roze-eukaliptus.html"
       },
       "headline": "FlowerBox z Czerwonymi Różami i Eukaliptusem – Najlepszy Prezent",
-      "image": {
+      "image": 
         "@type": "ImageObject",
         "url": "https://kwiaciarniamilosc.pl/assets/img/blog_img/FlowerBox-z-Czerwonymi-Różami-i-Eukaliptusem.JPG",
         "width": 1200,
@@ -56,7 +56,6 @@
       "publisher": {
         "@type": "Organization",
         "name": "Kwiaciarnia Miłość",
-        "logo": "logo": "https://kwiaciarniamilosc.pl/assets/img/logo/logo.png",
           "@type": "ImageObject",
           "url": "https://kwiaciarniamilosc.pl/assets/img/logo/logo.png",
           "width": 600,
@@ -273,7 +272,10 @@
             .blog-header h1 {
                 font-size: 2rem;
             }
-            
+         @media (max-width: 768px) {
+            .logo img {
+                height: 40px; /* Adjust size for smaller screens */
+            }
             .content {
                 padding: 20px;
             }
