@@ -148,6 +148,22 @@
             justify-content: space-between;
             align-items: center;
         }
+         .nav-list {
+            list-style: none; /* Removes default bullets */
+            display: flex; /* Makes the list items inline */
+            justify-content:flex-end; /* Aligns items to the right */
+            padding: 0; /* Removes default padding */
+            margin: 0; /* Removes default margin */
+        }
+
+        .nav-list li {
+            margin-right: 20px; /* Adds spacing between links */
+        }
+
+        .nav-list a {
+            text-decoration: none; /* Removes underline */
+            color: #333; /* Sets text color */
+        }
         
         .logo {
             display: flex;
@@ -276,7 +292,12 @@
             <span class="logo-text">Kwiaciarnia Miłość</span>
             </a>
         </div>
-        
+            <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">blogu</a></li>
+                <li><a href="home.html">o nas</a></li>
+             </ul>
+             </nav>
     </header>
 
     <div class="blog-header">
