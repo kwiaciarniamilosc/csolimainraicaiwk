@@ -39,5 +39,11 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>     
+         <url>
+        <loc>https://kwiaciarniamilosc.pl/blog/blog5.html></loc>
+        <lastmod>2025-01-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>      
     <!-- Add more URLs for other pages -->
 </urlset>
