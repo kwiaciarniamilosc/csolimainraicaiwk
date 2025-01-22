@@ -143,6 +143,36 @@
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
+	/* General styling for the video element */
+video {
+    display: block; /* Ensures no extra space below the video */
+    margin: 20px auto; /* Centers the video horizontally */
+    border: 3px solid #333; /* Adds a border */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow */
+    width: 100%; /* Makes the video responsive */
+    max-width: 800px; /* Limits the maximum width */
+    background-color: #000; /* Adds a fallback background for loading */
+}
+
+/* Style for the container holding the video (if you use one) */
+.video-container {
+    text-align: center; /* Centers any additional content */
+    padding: 10px; /* Adds padding around the video */
+    background-color: #f8f8f8; /* Light gray background */
+    border-radius: 15px; /* Rounds the corners of the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow to the container */
+}
+
+/* Optional: Styling for captions */
+video::-webkit-media-text-track-display {
+    background: rgba(0, 0, 0, 0.7); /* Background for captions */
+    color: #fff; /* Caption text color */
+    padding: 5px; /* Padding for captions */
+    font-size: 14px; /* Font size for captions */
+    border-radius: 3px; /* Rounds the corners of the captions */
+}
+    
 
         .social-links a:hover {
             color: #ff6f61; /* Matches the primary color */
@@ -213,14 +243,14 @@
                <p>Kwiaty to nie tylko ozdoba domu, ale także źródło radości, przytulności i świeżości. Potrafią napełnić pokój życiem, podkreślić styl wnętrza, 
                a nawet poprawić nastrój. W tym artykule omówimy, jak prawidłowo urządzić przestrzeń z kwiatami w domu oraz jakie są sekrety wyboru wazonu do każdego rodzaju bukietu.</p>
             
-     <h2>Dlaczego warto mieć kwiaty w domu?</h2>
+ <h2>Dlaczego warto mieć kwiaty w domu?</h2>
              <ul>
                 <li><strong>Estetyka:</strong>Żywe kwiaty uzupełniają dekorację domu, dodają koloru i świeżości.</li>
                 <li><strong>Zdrowie emocjonalne</strong>Kwiaty mają zdolność podnoszenia poziomu szczęścia, zmniejszania stresu i tworzenia harmonijnej atmosfery. </li>
                 <li><strong> Aromaterapia:</strong>Wiele kwiatów ma przyjemny zapach, który działa uspokajająco i relaksująco.</li>
 		<li><strong> Oczyszczanie powietrza:</strong>Rośliny i kwiaty pomagają oczyszczać powietrze z toksyn i napełniają je tlenem.</li>
             </ul>
-   h2>Jak dobrać wazon do kwiatów?</h2>
+   <h2>Jak dobrać wazon do kwiatów?</h2>
                 <p>Odpowiednio dobrany wazon podkreśla piękno bukietu i zapewnia jego trwałość. Ważne jest, aby zwrócić uwagę na rozmiar, kształt i materiał wazonu, 
                  a także typ kwiatów.</p>
 
@@ -231,7 +261,7 @@
               <ul>
                  <li><strong> Wysokie kwiaty (róże, lilie:</strong>wybierz wysoki wazon, który ma około 1/2 wysokości kwiatu</li>
                  <li><strong>Krótkie bukiety (piwonie, ranunkulus)</strong>idealne będą niskie i szerokie wazoniki.</li>
-		  <li><strong>Kwiaty polne:</strong>użyj wazonów średniej wysokości..</li>
+		 <li><strong>Kwiaty polne:</strong>użyj wazonów średniej wysokości..</li>
               </ul>
 		
          <h3>2.Kształt wazonu</h3>
@@ -258,12 +288,12 @@
                  </ul>
    <h2>Porady dotyczące pielęgnacji kwiatów w wazonie</h2>
                  
-	          <p>  1. Przed wstawieniem kwiatów do wazonu przytnij łodygi – to poprawia dostęp do wody.
-                       2. Zmieniaj wodę co 2–3 dni i myj wazon, aby uniknąć rozwoju bakterii.
-                       3. Dodaj do wody nawóz dla kwiatów lub odrobinę cukru i kwasu cytrynowego.
-                       4. Umieszczaj kwiaty z dala od bezpośredniego światła słonecznego i źródeł ciepła, aby przedłużyć ich świeżość.</p>
-
-  <h2> Jak organicznie wkomponować kwiaty w wystrój wnętrza? </h2>
+	          <ul> <li> 1. Przed wstawieniem kwiatów do wazonu przytnij łodygi – to poprawia dostęp do wody.</li>
+                       <li>2. Zmieniaj wodę co 2–3 dni i myj wazon, aby uniknąć rozwoju bakterii.</li>
+                       <li>3. Dodaj do wody nawóz dla kwiatów lub odrobinę cukru i kwasu cytrynowego.</li>
+                       <li>4. Umieszczaj kwiaty z dala od bezpośredniego światła słonecznego i źródeł ciepła, aby przedłużyć ich świeżość.</li>
+                    </ul>
+    <h2> Jak organicznie wkomponować kwiaty w wystrój wnętrza? </h2>
                <p>Prawidłowe podejście do wyboru wazonu i pielęgnacji kwiatów pomoże zachować ich piękno na dłużej,
                  a Twój dom zawsze będzie pełen harmonii i przytulności. Zrób z kwiatów nieodłączną część swojego wnętrza!</p>
 	       <ul>
@@ -279,9 +309,13 @@
                 <img src="https://kwiaciarniamilosc.pl/assets/img/blog_img/Kwiaty .jpg" alt="Czerwone róże" loading="lazy">
                 <img src="https://kwiaciarniamilosc.pl/assets/img/blog_img/Kwiatydomu.jpg" alt="Bukiet czerwonych róż" loading="lazy">
             </div>
-		<video controls width="600">
+		<div class="video-container">
+    <video controls>
         <source src="assets/img/blog_img/video_2025-01-21_22-16-59.mp4" type="video/mp4">
-				</video>
+        Your browser does not support the video tag.
+    </video>
+</div>
+
         </article>
     </main>
 
