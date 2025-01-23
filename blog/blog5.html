@@ -25,7 +25,7 @@
     </script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
-
+    
     <!-- Styles -->
     <style>
         :root {
@@ -159,39 +159,25 @@
             transition: transform 0.3s ease;
         }
 	/* General styling for the video element */
-video {
-    display: block; /* Ensures no extra space below the video */
-    margin: 20px auto; /* Centers the video horizontally */
-    border: 3px solid #333; /* Adds a border */
-    border-radius: 10px; /* Rounds the corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow */
-    width: 100%; /* Makes the video responsive */
-    max-width: 800px; /* Limits the maximum width */
-    background-color: #000; /* Adds a fallback background for loading */
+
+    .video-container {
+    position: relative;
+    width: 100%; /* Full width of container */
+    padding-top: 177%; /* (1280 / 720) * 100% */
 }
 
-/* Style for the container holding the video (if you use one) */
-.video-container {
-    text-align: center; /* Centers any additional content */
-    padding: 10px; /* Adds padding around the video */
-    background-color: #f8f8f8; /* Light gray background */
-    border-radius: 15px; /* Rounds the corners of the container */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow to the container */
-    width: 720px; /* Width of the video */
-    height: 1280px; /* Height of the video */
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 50%;
+}
+.video-responsive {
+    max-width: 100%; /* Video width scales with the container */
+    height: auto; /* Maintains aspect ratio */
 }
 
-}
-
-/* Optional: Styling for captions */
-video::-webkit-media-text-track-display {
-    background: rgba(0, 0, 0, 0.7); /* Background for captions */
-    color: #fff; /* Caption text color */
-    padding: 5px; /* Padding for captions */
-    font-size: 14px; /* Font size for captions */
-    border-radius: 3px; /* Rounds the corners of the captions */
-}
-    
 
         .social-links a:hover {
             color: #ff6f61; /* Matches the primary color */
@@ -247,7 +233,7 @@ video::-webkit-media-text-track-display {
 	    <nav>
             <ul class="nav-list">
                 <li><a href="index.html">blogu</a></li>
-                <li><a href="workspaces/csolimainraicaiwk/home.html">o nas</a></li>
+                <li><a href="csolimainraicaiwk/home.html">o nas</a></li>
             </ul>
           </nav>
      </header>
@@ -329,11 +315,13 @@ video::-webkit-media-text-track-display {
                 <img src="https://kwiaciarniamilosc.pl/assets/img/blog_img/Kwiatydomu.jpg" alt="Bukiet czerwonych róż" loading="lazy">
             </div>
 		<div class="video-container">
-    <video controls>
-        <source src="assets/img/blog_img/video_2025-01-21_22-16-59.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+            <video width="720" height="1280" controls>
+                <source src="https://kwiaciarniamilosc.pl/assets/img/blog_img/video_2025-01-21_22-16-59.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                
+            </video>
+            </div>
 
         </article>
     </main>
